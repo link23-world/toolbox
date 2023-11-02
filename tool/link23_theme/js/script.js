@@ -4,11 +4,11 @@
 // Current version number
 const version = "0.1.0";
 // Full name of the tool
-const fullName = "<Full name>";
+const fullName = "link23 Toolbox for Genomic Equity";
 // Short name of the tool for page titles
-const shortName = "<Short name>";
+const shortName = "link23 Toolbox";
 // GitHub repository
-const repo = "<repo-name>";
+const repo = "toolbox";
 // Zenodo DOI when you have it
 const zenodo = "<doi_1>/zenodo.<doi_2>";
 

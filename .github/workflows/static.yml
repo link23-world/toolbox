@@ -27,6 +27,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Refresh tools
+        run: |
+          echo -e "loadTools = function() {\n return $(cat tool/tools/tools.json)\n}" | sed -e 's/\\n/\n/g' > tool/src/loadtools.js
+        shell: bash
+
+      - name: Save tools
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: "Update tools [skip ci]"
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

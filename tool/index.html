@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- FIXME: CHANGE PAGE TITLE HERE -->
-    <title>Page Title</title>
+    <title>link23 Toolbox</title>
     <!-- link23 theme don't edit these lines -->
     <link rel="icon" type="image/x-icon" href="link23_theme/img/favicon.ico">
     <link rel="stylesheet" href="link23_theme/css/link23.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="link23_theme/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="link23_theme/js/script.js"></script>
+
+    <!-- dataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+    <!-- Toolkit phrases -->
+    <script src="src/loadtools.js"></script>
+    <script src="src/toolbox.js"></script>
+    <!-- Tabulator -->
+    <link href="src/tabulator-master/tabulator.min.css" rel="stylesheet">
+    <link href="src/tabulator-master/tabulator_simple.min.css" rel="stylesheet">
+    <script type="text/javascript" src="src/tabulator-master/tabulator.min.js"></script>
+    <!-- Bootstrap select -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
     <!-- Tool stylesheet -->
     <link rel="stylesheet" href="css/stylesheet.css">
   </head>
@@ -25,9 +38,69 @@
         <h1 class="content-title fullname"></h1>
         <p>See <a href="howto.html">"How to use this tool"</a> to learn about using this tool. If you want to get in touch you can find contact information <a href="contact.html">here</a>.</p>
 
-        <div class="row content">
-          <div class="col"></div>
+        <div class="row content px-3" style="overflow: hidden;">
+          <div class="col-6 h-100 card shadow bg-white rounded mb-2">
+            <div class="text-left py-2 my-2">
+            <span>Status</span>
+              <select class="selectpicker" data-width="fit" id="filter-cond">
+                <option value="in">is</option>
+                <option value="nin">is not</option>
+              </select>
+
+              <select class="selectpicker" multiple data-width="fit" id="filter-status" title="Select status">
+                <option value="green">Green</option>
+                <option value="amber">Amber</option>
+                <option value="red">Red</option>
+                <option value="grey">Grey</option>
+              </select>
+
+              <button type="button" class="btn btn-light" id="filter-clear">Clear</button>
+            </div>
+            <div style="flex: 1; min-height: 0px; overflow: hidden;">
+              <div id="toolboxTable"></div>
+            </div>
+          </div>
+          <div class="col-6 d-flex flex-column h-100 px-3">
+            <div class="row pb-1">
+            <div class="card px-4 py-2 shadow rounded overflow-none tool_card">
+              <div class="card-text text-white m-0 p-0">
+                <h2 id="tool_name" class="m-0 p-0">Click a tool to learn more</h2>
+                <p id="tool_description" class="m-0 p-0"></p>
+              </div>
+            </div>
+          </div>
+          <div class="row h-100 d-flex flex-row card shadow bg-white rounded" style="flex: 1; overflow-y: auto; overflow-x: hidden; min-height: 0px;">
+              <div class="card-body text-left">
+                <div class="card-text">
+                  <h3 class="d-inline">Tool group: </h3><h4 class="d-inline" id="tool_group"></h4><br>
+                  <h3 class="d-inline">Tags: </h3><h4 class="d-inline" id="tool_tags"></h4>
+                  <div id="tool_licence"><h4>Licence:</h4></div>
+                  <hr>
+                  <h3>Tool Rating</h3>
+                  <p>See <a href="https://www.link23.world/standard/">our standard</a> for details about how we rate tools,
+                  this is <b>not</b> a mark of quality or utility but about how 'open' the tool is.
+                  Overall we rated this tool as <span id="tool_rating"></span>.
+                  Breaking down this rating by category, we scored this tool as:
+                  <ul>
+                    <li><b>Openness</b> – <span id="tool_open"></span><br>
+                      <span id="tool_open_why"></span></li>
+                    <li><b>Documentation</b> – <span id="tool_docs"></span><br>
+                      <span id="tool_docs_why"></span></li>
+                    <li><b>Trustworthiness</b> – <span id="tool_trust"></span><br>
+                      <span id="tool_trust_why"></span></li>
+                    <li><b>Accessibility</b> – <span id="tool_acc"></span><br>
+                      <span id="tool_acc_why"></span></li>
+                    <li><b>Sustainability</b> – <span id="tool_sust"></span><br>
+                      <span id="tool_sust_why"></span></li>
+                    <li><b>Interoperability</b> – <span id="tool_inter"></span><br>
+                      <span id="tool_inter_why"></span></li>
+                  </ul>
+                  </p>
+              </div>
+            </div>
         </div>
+      </div>
+      </div>
       </div>
     </main>
 

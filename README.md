@@ -1,8 +1,8 @@
 # [Tool Name]
 
-[![Static Badge](https://img.shields.io/badge/link23_Tool-In_Development-purple?style=plastic&label=link23%20Tool&color=%23FFB300)](https://link23-world.github.io/<REPOSITORY-NAME>)
+[![Static Badge](https://img.shields.io/badge/link23_Tool-In_Development-purple?style=plastic&label=link23%20Tool&color=%23FFB300)](https://link23-world.github.io/toolbox)
 
-[![All Contributors](https://img.shields.io/github/all-contributors/link23-world/<REPOSITORY-NAME>?color=ee8449&style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/github/all-contributors/link23-world/toolbox?color=ee8449&style=flat-square)](#contributors)
 [![DOI](https://zenodo.org/badge/.svg)](https://zenodo.org/doi//zenodo.)
 
 ## About this repository
@@ -34,4 +34,4 @@ See our [contribution guidelines](/CONTRIBUTING.md) for details about how we cre
 
 The following people (who don't have GitHub accounts) also contributed:
 
-- 
+-
