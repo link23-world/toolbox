@@ -2,7 +2,6 @@ loadTools = function() {
  return [
   {
     "name": "1000 Genomes Project",
-    "rating" : "amber",
     "description": "A catalogue of common human genetic variation",
     "url": "https://www.internationalgenome.org/",
     "group": "Dataset",
@@ -98,13 +97,6 @@ loadTools = function() {
     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3245293/",
     "group": "Software",
     "tags": "ancestry"
-  },
-  {
-    "name": "Colate",
-    "description": "Colate is a fast and scalable method for inferring ancestral relationships through time between low-coverage genomes without requiring phasing or imputation",
-    "url": "https://github.com/leospeidel/Colate",
-    "group": "Software",
-    "tags": "Probably too niche - Relate more useful (same authors)"
   },
   {
     "name": "Cyverse",
@@ -546,13 +538,6 @@ loadTools = function() {
     "url": null,
     "group": "Framework",
     "tags": "guidance / advice"
-  },
-  {
-    "name": "Toolkit: Starting with values to drive diversity",
-    "description": null,
-    "url": null,
-    "group": "Framework",
-    "tags": "Need more info on this - @Maxine Mackintosh do yo know what this refers to?"
   },
   {
     "name": "Tractor",
