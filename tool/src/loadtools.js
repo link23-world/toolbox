@@ -5,28 +5,32 @@ loadTools = function() {
     "description": "A catalogue of common human genetic variation",
     "url": "https://www.internationalgenome.org/",
     "group": "Dataset",
-    "tags": "database, variation"
+    "tags": "database, variation",
+    "licence": "[Custom licence](https://www.internationalgenome.org/IGSR_disclaimer)"
   },
   {
     "name": "A Framework for Promoting Diversity, Equity, and Inclusion in Genetics and Genomics Research",
     "description": "The framework highlights the involvement of a multistakeholder team, including the participants and communities to be engaged, to ensure robust methods for recruitment, retention, return of genomic results, quality of engagement, follow-up, and monitoring of participants.",
     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9223088/",
     "group": "Framework",
-    "tags": "multistakeholder, template, guide, style, pattern"
+    "tags": "multistakeholder, template, guide, style, pattern",
+    "licence": "[CC BY](https://jamanetwork.com/pages/cc-by-license-permissions/)"
   },
   {
     "name": "Addressing diversity and inclusion challenges in global neuro-psychiatric and behavioral genomics research",
     "description": "Suggestions on how to advance efforts and rapidly move towards achieving diversity and inclusion in neuro-psychiatric and behavioral genomics.",
     "url": "https://www.frontiersin.org/articles/10.3389/fgene.2022.1021649/full",
     "group": "Framework",
-    "tags": "template, guide, style, pattern"
+    "tags": "template, guide, style, pattern",
+    "licence": "[CC BY](https://creativecommons.org/licenses/by/4.0/)"
   },
   {
     "name": "Admixture",
     "description": "a software tool for maximum likelihood estimation of individual ancestries from multilocus SNP genotype datasets.",
     "url": "https://dalexander.github.io/admixture/",
     "group": "Software",
-    "tags": "ancestry"
+    "tags": "ancestry",
+    "licence": "NONE"
   },
   {
     "name": "Advancing Diversity and Inclusion in Scientific Open Source",

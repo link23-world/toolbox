@@ -11,7 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="link23_theme/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="link23_theme/js/script.js"></script>
-
+    <!-- Showdown - Markdown -> HTML converter -->
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.0/dist/showdown.min.js"></script>
     <!-- dataTables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
@@ -64,17 +65,17 @@
             <div class="row pb-1">
             <div class="card px-4 py-2 shadow rounded overflow-none tool_card">
               <div class="card-text text-white m-0 p-0">
-                <h2 id="tool_name" class="m-0 p-0">Click a tool to learn more</h2>
-                <p id="tool_description" class="m-0 p-0"></p>
+                <h2 id="tool_name" class="m-0 p-0 tool_detail">Click a tool to learn more</h2><br>
+                <p id="tool_description" class="m-0 p-0 tool_detail"></p>
               </div>
             </div>
           </div>
           <div class="row h-100 d-flex flex-row card shadow bg-white rounded" style="flex: 1; overflow-y: auto; overflow-x: hidden; min-height: 0px;">
               <div class="card-body text-left">
                 <div class="card-text">
-                  <h3 class="d-inline">Tool group: </h3><h4 class="d-inline" id="tool_group"></h4><br>
-                  <h3 class="d-inline">Tags: </h3><h4 class="d-inline" id="tool_tags"></h4>
-                  <div id="tool_licence"><h4>Licence:</h4></div>
+                  <h3 class="d-inline">Tool group: </h3><h4 class="tool_detail" id="tool_group"></h4><br>
+                  <h3 class="d-inline">Tags: </h3><h4 class="tool_detail" id="tool_tags"></h4><br>
+                  <h4 class="d-inline">Licence: </h4><span class="tool_detail" id="tool_licence"></span>
                   <hr>
                   <h3>Tool Rating</h3>
                   <p>See <a href="https://www.link23.world/standard/">our standard</a> for details about how we rate tools,
@@ -82,18 +83,18 @@
                   Overall we rated this tool as <span id="tool_rating"></span>.
                   Breaking down this rating by category, we scored this tool as:
                   <ul>
-                    <li><b>Openness</b> – <span id="tool_open"></span><br>
-                      <span id="tool_open_why"></span></li>
-                    <li><b>Documentation</b> – <span id="tool_docs"></span><br>
-                      <span id="tool_docs_why"></span></li>
-                    <li><b>Trustworthiness</b> – <span id="tool_trust"></span><br>
-                      <span id="tool_trust_why"></span></li>
-                    <li><b>Accessibility</b> – <span id="tool_acc"></span><br>
-                      <span id="tool_acc_why"></span></li>
-                    <li><b>Sustainability</b> – <span id="tool_sust"></span><br>
-                      <span id="tool_sust_why"></span></li>
-                    <li><b>Interoperability</b> – <span id="tool_inter"></span><br>
-                      <span id="tool_inter_why"></span></li>
+                    <li><b>Openness</b> – <span id="tool_open" class="tool_detail"></span><br>
+                      <span id="tool_open_why" class="tool_detail"></span></li>
+                    <li><b>Documentation</b> – <span id="tool_docs" class="tool_detail"></span><br>
+                      <span id="tool_docs_why" class="tool_detail"></span></li>
+                    <li><b>Trustworthiness</b> – <span id="tool_trust" class="tool_detail"></span><br>
+                      <span id="tool_trust_why" class="tool_detail"></span></li>
+                    <li><b>Accessibility</b> – <span id="tool_acc" class="tool_detail"></span><br>
+                      <span id="tool_acc_why" class="tool_detail"></span></li>
+                    <li><b>Sustainability</b> – <span id="tool_sust" class="tool_detail"></span><br>
+                      <span id="tool_sust_why" class="tool_detail"></span></li>
+                    <li><b>Interoperability</b> – <span id="tool_inter" class="tool_detail"></span><br>
+                      <span id="tool_inter_why" class="tool_detail"></span></li>
                   </ul>
                   </p>
               </div>

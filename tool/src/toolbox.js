@@ -1,5 +1,6 @@
 $(function() {
   const tools = loadTools();
+
   $(".tool_card").css("background-color", "gray");
 
   var table = new Tabulator("#toolboxTable", {
@@ -29,10 +30,17 @@ $(function() {
       return null;
     }
 
+    $(".tool_detail").each((i, obj) => obj.innerHTML = "");
+
     for (key in tool) {
-      $(`#tool_${key}`).html(tool[key]);
+      $(`#tool_${key}`).html(mdtoHTML(tool[key]));
     }
 
+    if (tool["licence"] == "NONE") {
+      $("#tool_licence").css("color", "red");
+    } else {
+      $("#tool_licence").css("color", "black");
+    }
 
     $(`#tool_rating`).css("color", getCol("red"));
 
@@ -135,6 +143,14 @@ $(function() {
     } else {
       return rag[0].toUpperCase();
     }
+  }
+
+  function mdtoHTML(txt) {
+    if (txt === undefined || txt === null) {
+      return undefined;
+    }
+
+    return txt.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
   }
 
 });
